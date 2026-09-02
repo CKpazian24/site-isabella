@@ -1,0 +1,2619 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Isabella Prado | Estética Facial</title>
+
+    <meta name="description" content="Isabella Prado — Estética Facial em Araçatuba. Limpeza de pele e cuidados personalizados.">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           CONFIGURAÇÕES GERAIS
+        ===================================================== */
+
+        :root {
+            --ivory: #f8f4ed;
+            --cream: #eee6d9;
+            --beige: #dfd2c0;
+
+            --gold: #b08a52;
+            --gold-light: #d5bb8d;
+
+            --brown: #59483a;
+            --brown-dark: #2c2520;
+
+            --text: #625a51;
+            --white: #ffffff;
+
+            --line: rgba(176, 138, 82, 0.25);
+
+            --serif: "Cormorant Garamond", serif;
+            --sans: "Montserrat", sans-serif;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            background: var(--ivory);
+            color: var(--text);
+            font-family: var(--sans);
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        .container {
+            width: min(1180px, 90%);
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           BOTÕES
+        ===================================================== */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            padding: 15px 25px;
+
+            border: 1px solid var(--gold);
+
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            transition: .35s ease;
+
+            cursor: pointer;
+        }
+
+
+        .btn-gold {
+            background: var(--gold);
+            color: white;
+        }
+
+
+        .btn-gold:hover {
+            background: var(--brown-dark);
+            border-color: var(--brown-dark);
+            transform: translateY(-3px);
+        }
+
+
+        .btn-outline {
+            color: var(--brown-dark);
+            background: transparent;
+        }
+
+
+        .btn-outline:hover {
+            background: var(--brown-dark);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 82px;
+
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+
+            background: rgba(248, 244, 237, .82);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(176, 138, 82, .12);
+        }
+
+
+        .header-inner {
+            width: min(1180px, 90%);
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* LOGO */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+
+        .brand-mark {
+            width: 43px;
+            height: 43px;
+
+            border: 1px solid var(--gold);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-family: var(--serif);
+            font-size: 20px;
+
+            color: var(--gold);
+
+            position: relative;
+        }
+
+
+        .brand-mark::after {
+            content: "";
+            position: absolute;
+
+            width: 29px;
+            height: 29px;
+
+            border: 1px solid rgba(176, 138, 82, .45);
+        }
+
+
+        .brand-text strong {
+            display: block;
+
+            font-family: var(--serif);
+            font-size: 25px;
+            font-weight: 600;
+
+            line-height: 1;
+
+            color: var(--brown-dark);
+        }
+
+
+        .brand-text span {
+            font-size: 8px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+
+            color: var(--gold);
+        }
+
+
+        /* MENU */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+
+        .nav-links a {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+
+            color: var(--brown);
+
+            position: relative;
+        }
+
+
+        .nav-links a:not(.nav-button)::after {
+            content: "";
+
+            position: absolute;
+            bottom: -7px;
+            left: 0;
+
+            width: 0;
+            height: 1px;
+
+            background: var(--gold);
+
+            transition: .3s;
+        }
+
+
+        .nav-links a:not(.nav-button):hover::after {
+            width: 100%;
+        }
+
+
+        .nav-button {
+            padding: 11px 18px;
+
+            background: var(--brown-dark);
+            color: white !important;
+
+            transition: .3s;
+        }
+
+
+        .nav-button:hover {
+            background: var(--gold);
+        }
+
+
+        /* MENU MOBILE */
+
+        .menu-toggle {
+            display: none;
+
+            border: none;
+            background: transparent;
+
+            font-size: 25px;
+
+            color: var(--brown-dark);
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 100px;
+
+            overflow: hidden;
+        }
+
+
+        .hero::before {
+            content: "ISABELLA";
+
+            position: absolute;
+
+            left: -30px;
+            bottom: -20px;
+
+            font-family: var(--serif);
+            font-size: clamp(130px, 18vw, 270px);
+
+            color: rgba(176, 138, 82, .055);
+
+            letter-spacing: -10px;
+
+            pointer-events: none;
+        }
+
+
+        .hero-container {
+            width: min(1180px, 90%);
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            align-items: center;
+
+            gap: 70px;
+        }
+
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            margin-bottom: 20px;
+
+            color: var(--gold);
+
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+
+        .eyebrow::before {
+            content: "";
+
+            width: 35px;
+            height: 1px;
+
+            background: var(--gold);
+        }
+
+
+        .hero h1 {
+            font-family: var(--serif);
+
+            font-size: clamp(65px, 8vw, 105px);
+
+            font-weight: 500;
+
+            line-height: .78;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero h1 span {
+            display: block;
+
+            margin-left: 65px;
+
+            color: var(--gold);
+        }
+
+
+        .hero-description {
+            max-width: 470px;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            color: var(--text);
+
+            margin-bottom: 35px;
+        }
+
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* FOTO */
+
+        .hero-photo-area {
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .hero-photo-frame {
+            width: min(430px, 100%);
+
+            position: relative;
+
+            padding: 13px;
+
+            border: 1px solid var(--gold-light);
+        }
+
+
+        .hero-photo-frame::before {
+            content: "";
+
+            position: absolute;
+
+            width: 90%;
+            height: 90%;
+
+            border: 1px solid rgba(176, 138, 82, .35);
+
+            top: -25px;
+            right: -25px;
+
+            z-index: -1;
+        }
+
+
+        .hero-photo-frame img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+        }
+
+
+        .photo-label {
+            position: absolute;
+
+            bottom: 25px;
+            left: -35px;
+
+            background: var(--brown-dark);
+
+            color: white;
+
+            padding: 17px 21px;
+
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           MINI INTRO
+        ===================================================== */
+
+        .intro-strip {
+            background: var(--brown-dark);
+
+            color: white;
+
+            padding: 35px 0;
+        }
+
+
+        .intro-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+        }
+
+
+        .intro-item {
+            display: flex;
+            align-items: center;
+
+            gap: 18px;
+
+            padding-right: 25px;
+
+            border-right: 1px solid rgba(255,255,255,.15);
+        }
+
+
+        .intro-item:last-child {
+            border-right: none;
+        }
+
+
+        .intro-number {
+            font-family: var(--serif);
+
+            font-size: 30px;
+
+            color: var(--gold-light);
+        }
+
+
+        .intro-item p {
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            line-height: 1.6;
+
+            color: rgba(255,255,255,.7);
+        }
+
+
+        /* =====================================================
+           SEÇÕES
+        ===================================================== */
+
+        section {
+            padding: 115px 0;
+        }
+
+
+        .section-header {
+            margin-bottom: 55px;
+        }
+
+
+        .section-header.center {
+            text-align: center;
+        }
+
+
+        .section-kicker {
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: var(--gold);
+
+            margin-bottom: 12px;
+        }
+
+
+        .section-title {
+            font-family: var(--serif);
+
+            font-size: clamp(45px, 6vw, 70px);
+
+            line-height: .9;
+
+            font-weight: 500;
+
+            color: var(--brown-dark);
+        }
+
+
+        .section-subtitle {
+            max-width: 560px;
+
+            margin-top: 20px;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+            color: var(--text);
+        }
+
+
+        .center .section-subtitle {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* =====================================================
+           EXPERIÊNCIA
+        ===================================================== */
+
+        .experience {
+            background: var(--cream);
+        }
+
+
+        .experience-grid {
+            display: grid;
+
+            grid-template-columns: 1.1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .experience-text p {
+            font-size: 13px;
+
+            line-height: 2;
+
+            max-width: 550px;
+        }
+
+
+        .experience-cards {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .experience-card {
+            min-height: 210px;
+
+            background: var(--ivory);
+
+            padding: 25px 20px;
+
+            border: 1px solid var(--line);
+
+            position: relative;
+
+            transition: .4s ease;
+        }
+
+
+        .experience-card:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--gold);
+        }
+
+
+        .experience-card-number {
+            font-family: var(--serif);
+
+            font-size: 35px;
+
+            color: var(--gold);
+        }
+
+
+        .experience-card h3 {
+            font-family: var(--serif);
+
+            font-size: 25px;
+
+            font-weight: 500;
+
+            color: var(--brown-dark);
+
+            margin: 30px 0 10px;
+        }
+
+
+        .experience-card p {
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           TRATAMENTOS
+        ===================================================== */
+
+        .treatment-main {
+            display: grid;
+
+            grid-template-columns: 1fr 1.2fr;
+
+            border: 1px solid var(--line);
+
+            background: var(--cream);
+        }
+
+
+        .treatment-side {
+            padding: 55px;
+
+            background: var(--brown-dark);
+
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+        }
+
+
+        .treatment-side span {
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: var(--gold-light);
+        }
+
+
+        .treatment-side h3 {
+            font-family: var(--serif);
+
+            font-size: 48px;
+
+            line-height: .95;
+
+            font-weight: 500;
+
+            margin: 30px 0;
+        }
+
+
+        .treatment-side p {
+            font-size: 11px;
+
+            line-height: 1.8;
+
+            color: rgba(255,255,255,.7);
+        }
+
+
+        .treatment-info {
+            padding: 55px;
+        }
+
+
+        .price {
+            font-family: var(--serif);
+
+            font-size: 55px;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 5px;
+        }
+
+
+        .duration {
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            color: var(--gold);
+
+            margin-bottom: 35px;
+        }
+
+
+        .steps {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .step {
+            padding: 17px 0;
+
+            border-top: 1px solid var(--line);
+
+            display: flex;
+
+            gap: 15px;
+        }
+
+
+        .step-number {
+            font-family: var(--serif);
+
+            color: var(--gold);
+
+            font-size: 20px;
+        }
+
+
+        .step strong {
+            display: block;
+
+            font-family: var(--serif);
+
+            font-size: 20px;
+
+            font-weight: 600;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 4px;
+        }
+
+
+        .step p {
+            font-size: 9px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           FUTUROS TRATAMENTOS
+        ===================================================== */
+
+        .future-treatment {
+            margin-top: 15px;
+
+            padding: 30px;
+
+            border: 1px dashed var(--gold-light);
+
+            text-align: center;
+        }
+
+
+        .future-treatment span {
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: var(--gold);
+        }
+
+
+        .future-treatment h3 {
+            font-family: var(--serif);
+
+            font-size: 30px;
+
+            font-weight: 500;
+
+            color: var(--brown-dark);
+
+            margin: 8px 0;
+        }
+
+
+        .future-treatment p {
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           PRODUTOS
+        ===================================================== */
+
+        .products {
+            background: var(--cream);
+        }
+
+
+        .products-layout {
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .products-list {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .product {
+            padding: 25px;
+
+            background: var(--ivory);
+
+            border: 1px solid var(--line);
+
+            font-family: var(--serif);
+
+            font-size: 24px;
+
+            color: var(--brown-dark);
+
+            transition: .3s;
+        }
+
+
+        .product:hover {
+            border-color: var(--gold);
+
+            transform: translateX(5px);
+        }
+
+
+        /* =====================================================
+           CUIDADOS
+        ===================================================== */
+
+        .care-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 20px;
+        }
+
+
+        .care-card {
+            padding: 45px;
+
+            border: 1px solid var(--line);
+
+            background: var(--cream);
+        }
+
+
+        .care-card.after {
+            background: var(--brown-dark);
+
+            color: white;
+        }
+
+
+        .care-card h3 {
+            font-family: var(--serif);
+
+            font-size: 35px;
+
+            font-weight: 500;
+
+            margin-bottom: 25px;
+        }
+
+
+        .care-card ul {
+            list-style: none;
+        }
+
+
+        .care-card li {
+            padding: 13px 0;
+
+            border-bottom: 1px solid var(--line);
+
+            font-size: 10px;
+
+            line-height: 1.7;
+        }
+
+
+        .care-card.after li {
+            border-color: rgba(255,255,255,.12);
+        }
+
+
+        /* =====================================================
+           SOBRE
+        ===================================================== */
+
+        .about {
+            background: var(--cream);
+        }
+
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: .8fr 1.2fr;
+
+            gap: 90px;
+
+            align-items: center;
+        }
+
+
+        .about-mark {
+            width: 280px;
+            height: 350px;
+
+            margin: auto;
+
+            border: 1px solid var(--gold);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+        }
+
+
+        .about-mark::before {
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 290px;
+
+            border: 1px solid rgba(176,138,82,.4);
+        }
+
+
+        .about-mark span {
+            font-family: var(--serif);
+
+            font-size: 95px;
+
+            color: var(--gold);
+        }
+
+
+        .about-text p {
+            font-size: 12px;
+
+            line-height: 2;
+
+            margin-bottom: 18px;
+        }
+
+
+        .quote {
+            margin-top: 30px;
+
+            padding-left: 25px;
+
+            border-left: 2px solid var(--gold);
+
+            font-family: var(--serif);
+
+            font-size: 28px;
+
+            line-height: 1.2;
+
+            color: var(--brown-dark);
+        }
+
+
+        /* =====================================================
+           LOCALIZAÇÃO
+        ===================================================== */
+
+        .location {
+            background: var(--brown-dark);
+
+            color: white;
+        }
+
+
+        .location-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .location .section-title {
+            color: white;
+        }
+
+
+        .location-text {
+            font-size: 12px;
+
+            line-height: 1.9;
+
+            color: rgba(255,255,255,.65);
+
+            margin: 25px 0 30px;
+        }
+
+
+        .location-card {
+            border: 1px solid rgba(255,255,255,.15);
+
+            padding: 35px;
+
+            background: rgba(255,255,255,.03);
+        }
+
+
+        .location-card h3 {
+            font-family: var(--serif);
+
+            font-size: 30px;
+
+            font-weight: 500;
+
+            margin-bottom: 15px;
+        }
+
+
+        .location-card p {
+            font-size: 10px;
+
+            line-height: 1.8;
+
+            color: rgba(255,255,255,.65);
+
+            margin-bottom: 25px;
+        }
+
+
+        /* HORÁRIOS */
+
+        .hours {
+            margin-top: 30px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+        }
+
+
+        .hour {
+            padding: 13px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,.1);
+
+            font-size: 9px;
+
+            display: flex;
+
+            justify-content: space-between;
+        }
+
+
+        /* =====================================================
+           CONTATO
+        ===================================================== */
+
+        .contact {
+            text-align: center;
+
+            background:
+                radial-gradient(circle at 20% 30%, rgba(176,138,82,.09), transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(176,138,82,.08), transparent 30%),
+                var(--ivory);
+        }
+
+
+        .contact-title {
+            font-family: var(--serif);
+
+            font-size: clamp(55px, 8vw, 100px);
+
+            line-height: .8;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 30px;
+        }
+
+
+        .contact p {
+            max-width: 500px;
+
+            margin: auto auto 35px;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+        }
+
+
+        .socials {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+
+        .social {
+            border: 1px solid var(--line);
+
+            padding: 12px 18px;
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            transition: .3s;
+        }
+
+
+        .social:hover {
+            border-color: var(--gold);
+
+            color: var(--gold);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #211c18;
+
+            color: rgba(255,255,255,.5);
+
+            padding: 35px 0;
+        }
+
+
+        .footer-inner {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .footer-logo {
+            font-family: var(--serif);
+
+            font-size: 24px;
+
+            color: white;
+        }
+
+
+        footer p {
+            font-size: 9px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           WHATSAPP FLUTUANTE
+        ===================================================== */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            width: 58px;
+            height: 58px;
+
+            border-radius: 50%;
+
+            background: #4d7059;
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            z-index: 999;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.15);
+
+            transition: .3s;
+        }
+
+
+        .whatsapp:hover {
+            transform: translateY(-5px) scale(1.05);
+        }
+
+
+        .whatsapp svg {
+            width: 25px;
+            height: 25px;
+        }
+
+
+        /* =====================================================
+           ANIMAÇÃO
+        ===================================================== */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(25px);
+
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+
+        .reveal.visible {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVO
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .hero-container,
+            .experience-grid,
+            .products-layout,
+            .about-grid,
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .hero {
+                padding-top: 130px;
+            }
+
+
+            .hero-photo-area {
+                max-width: 430px;
+
+                margin: auto;
+            }
+
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .intro-item {
+                border-right: none;
+
+                border-bottom: 1px solid rgba(255,255,255,.15);
+
+                padding-bottom: 18px;
+            }
+
+
+            .intro-item:last-child {
+                border-bottom: none;
+            }
+
+
+            .treatment-main {
+                grid-template-columns: 1fr;
+            }
+
+
+            .location-grid {
+                gap: 40px;
+            }
+
+
+            .nav-links {
+                position: absolute;
+
+                top: 82px;
+                left: 0;
+
+                width: 100%;
+
+                background: var(--ivory);
+
+                display: none;
+
+                flex-direction: column;
+
+                padding: 25px;
+
+                border-bottom: 1px solid var(--line);
+            }
+
+
+            .nav-links.open {
+                display: flex;
+            }
+
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 80px 0;
+            }
+
+
+            .hero h1 {
+                font-size: 70px;
+            }
+
+
+            .hero h1 span {
+                margin-left: 35px;
+            }
+
+
+            .hero-photo-frame::before {
+                right: -10px;
+            }
+
+
+            .photo-label {
+                left: -5px;
+            }
+
+
+            .experience-cards {
+                grid-template-columns: 1fr;
+            }
+
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+
+            .treatment-side,
+            .treatment-info {
+                padding: 35px 25px;
+            }
+
+
+            .care-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .care-card {
+                padding: 30px;
+            }
+
+
+            .products-list {
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-mark {
+                width: 230px;
+                height: 290px;
+            }
+
+
+            .about-mark::before {
+                width: 180px;
+                height: 240px;
+            }
+
+
+            .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .hours {
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-inner {
+                flex-direction: column;
+
+                gap: 12px;
+
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="#inicio" class="brand">
+
+            <div class="brand-mark">
+                IP
+            </div>
+
+            <div class="brand-text">
+                <strong>Isabella Prado</strong>
+                <span>Estética Facial</span>
+            </div>
+
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="#experiencia">Experiência</a>
+
+            <a href="#tratamentos">Tratamentos</a>
+
+            <a href="#cuidados">Cuidados</a>
+
+            <a href="#sobre">Sobre</a>
+
+            <a href="#localizacao">Localização</a>
+
+            <a href="#contato" class="nav-button">
+                Agendar
+            </a>
+
+        </nav>
+
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-container">
+
+        <div class="hero-content reveal">
+
+            <div class="eyebrow">
+                Estética Facial · Araçatuba
+            </div>
+
+
+            <h1>
+                Cuidado
+                <span>com propósito.</span>
+            </h1>
+
+
+            <p class="hero-description">
+
+                Uma experiência de cuidado facial pensada para valorizar
+                sua pele, seu bem-estar e a confiança em cada detalhe.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="https://wa.me/5518991730294?text=Olá%20Isabella!%20Gostaria%20de%20agendar%20uma%20limpeza%20de%20pele."
+                    target="_blank"
+                    class="btn btn-gold"
+                >
+                    Agendar pelo WhatsApp
+                </a>
+
+
+                <a
+                    href="#tratamentos"
+                    class="btn btn-outline"
+                >
+                    Conhecer
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-photo-area reveal">
+
+            <div class="hero-photo-frame">
+
+                <img
+                    src="images/PERFILisabella.jpeg"
+                    alt="Isabella Prado"
+                >
+
+                <div class="photo-label">
+                    Beleza · Cuidado · Confiança
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO STRIP
+===================================================== -->
+
+<div class="intro-strip">
+
+    <div class="container">
+
+        <div class="intro-grid">
+
+            <div class="intro-item">
+
+                <div class="intro-number">
+                    01
+                </div>
+
+                <p>
+                    Atendimento<br>
+                    personalizado
+                </p>
+
+            </div>
+
+
+            <div class="intro-item">
+
+                <div class="intro-number">
+                    02
+                </div>
+
+                <p>
+                    Produtos<br>
+                    selecionados
+                </p>
+
+            </div>
+
+
+            <div class="intro-item">
+
+                <div class="intro-number">
+                    03
+                </div>
+
+                <p>
+                    Experiência<br>
+                    acolhedora
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     EXPERIÊNCIA
+===================================================== -->
+
+<section class="experience" id="experiencia">
+
+    <div class="container">
+
+        <div class="experience-grid">
+
+            <div class="experience-text reveal">
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        A experiência
+                    </div>
+
+                    <h2 class="section-title">
+                        Cuidado que<br>
+                        começa antes.
+                    </h2>
+
+                </div>
+
+
+                <p>
+
+                    Cada atendimento é pensado para que o cuidado
+                    com a pele seja também um momento de tranquilidade,
+                    conforto e confiança.
+
+                    <br><br>
+
+                    Da escolha dos produtos aos pequenos detalhes
+                    durante o procedimento, tudo é feito com atenção
+                    às particularidades de cada pele.
+
+                </p>
+
+            </div>
+
+
+            <div class="experience-cards reveal">
+
+                <div class="experience-card">
+
+                    <div class="experience-card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Resultado
+                    </h3>
+
+                    <p>
+                        Cuidado pensado para valorizar
+                        a saúde e a aparência da pele.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-card">
+
+                    <div class="experience-card-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Bem-estar
+                    </h3>
+
+                    <p>
+                        Um momento para desacelerar
+                        e cuidar de você.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-card">
+
+                    <div class="experience-card-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Confiança
+                    </h3>
+
+                    <p>
+                        Atendimento cuidadoso,
+                        acolhedor e atencioso.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRATAMENTOS
+===================================================== -->
+
+<section id="tratamentos">
+
+    <div class="container">
+
+        <div class="section-header center reveal">
+
+            <div class="section-kicker">
+                Tratamentos
+            </div>
+
+            <h2 class="section-title">
+                Seu ritual de cuidado.
+            </h2>
+
+            <p class="section-subtitle">
+
+                Um protocolo desenvolvido para proporcionar
+                uma experiência completa de limpeza e cuidado
+                facial.
+
+            </p>
+
+        </div>
+
+
+        <div class="treatment-main reveal">
+
+            <div class="treatment-side">
+
+                <div>
+
+                    <span>
+                        Procedimento principal
+                    </span>
+
+                    <h3>
+                        Limpeza<br>
+                        de Pele
+                    </h3>
+
+                </div>
+
+
+                <p>
+
+                    Uma rotina completa de cuidados que passa
+                    pela higienização, preparação da pele,
+                    extração e finalização.
+
+                </p>
+
+            </div>
+
+
+            <div class="treatment-info">
+
+                <div class="price">
+                    R$ 120
+                </div>
+
+                <div class="duration">
+                    Aproximadamente 1h30
+                </div>
+
+
+                <div class="steps">
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Higienização
+                            </strong>
+
+                            <p>
+                                Limpeza inicial adequada ao tipo
+                                de pele.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Esfoliação
+                            </strong>
+
+                            <p>
+                                Remoção de células superficiais
+                                e preparação da pele.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Emoliência
+                            </strong>
+
+                            <p>
+                                Preparação da pele para facilitar
+                                o processo de extração.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            04
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Extração
+                            </strong>
+
+                            <p>
+                                Remoção cuidadosa de impurezas
+                                e comedões.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            05
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Alta Frequência
+                            </strong>
+
+                            <p>
+                                Etapa complementar do protocolo
+                                após a extração.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            06
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Máscara & Proteção
+                            </strong>
+
+                            <p>
+                                Finalização com máscara, hidratação
+                                e proteção solar.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="future-treatment reveal">
+
+            <span>
+                Em breve
+            </span>
+
+            <h3>
+                Novos tratamentos
+            </h3>
+
+            <p>
+                Novidades e novos protocolos de cuidado
+                serão adicionados em breve.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUTOS
+===================================================== -->
+
+<section class="products">
+
+    <div class="container">
+
+        <div class="products-layout">
+
+            <div class="reveal">
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        Produtos
+                    </div>
+
+                    <h2 class="section-title">
+                        Marcas escolhidas<br>
+                        com cuidado.
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Produtos selecionados para fazer parte
+                        de uma rotina de atendimento cuidadosa
+                        e personalizada.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="products-list reveal">
+
+                <div class="product">
+                    La Roche-Posay
+                </div>
+
+                <div class="product">
+                    CeraVe
+                </div>
+
+                <div class="product">
+                    Principia
+                </div>
+
+                <div class="product">
+                    Sallve
+                </div>
+
+                <div class="product">
+                    Cetaphil
+                </div>
+
+                <div class="product">
+                    Extratos da Terra
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CUIDADOS
+===================================================== -->
+
+<section id="cuidados">
+
+    <div class="container">
+
+        <div class="section-header center reveal">
+
+            <div class="section-kicker">
+                Orientações
+            </div>
+
+            <h2 class="section-title">
+                Cuidados antes e depois.
+            </h2>
+
+            <p class="section-subtitle">
+
+                Algumas recomendações simples ajudam a preparar
+                a pele para o procedimento e manter uma rotina
+                de cuidados após o atendimento.
+
+            </p>
+
+        </div>
+
+
+        <div class="care-grid reveal">
+
+
+            <div class="care-card">
+
+                <h3>
+                    Antes
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Evite esfoliantes em casa e ácidos fortes
+                        por pelo menos 3 dias antes.
+                    </li>
+
+                    <li>
+                        Suspenda ácidos de tratamento, como
+                        retinoico ou glicólico, no dia anterior.
+                    </li>
+
+                    <li>
+                        Não esprema cravos ou espinhas antes
+                        do atendimento.
+                    </li>
+
+                    <li>
+                        Evite exposição direta ao sol nos dias
+                        anteriores.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="care-card after">
+
+                <h3>
+                    Depois
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Use protetor solar de forma rigorosa.
+                    </li>
+
+                    <li>
+                        Evite maquiagem pesada, principalmente
+                        nas primeiras 24 horas.
+                    </li>
+
+                    <li>
+                        Prefira limpeza suave, hidratação e
+                        ativos calmantes.
+                    </li>
+
+                    <li>
+                        Evite ácidos e esfoliantes por pelo
+                        menos 3 dias.
+                    </li>
+
+                    <li>
+                        Evite calor excessivo, suor intenso,
+                        sauna, praia e treino intenso no dia.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SOBRE
+===================================================== -->
+
+<section class="about" id="sobre">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+
+            <div class="about-mark reveal">
+
+                <span>
+                    IP
+                </span>
+
+            </div>
+
+
+            <div class="about-text reveal">
+
+                <div class="section-header">
+
+                    <div class="section-kicker">
+                        Sobre Isabella
+                    </div>
+
+                    <h2 class="section-title">
+                        Cuidado,<br>
+                        conhecimento<br>
+                        e atenção.
+                    </h2>
+
+                </div>
+
+
+                <p>
+
+                    Isabella Prado está construindo sua trajetória
+                    na área da estética facial, unindo sua paixão
+                    pelos cuidados com a pele à busca constante
+                    por conhecimento e aperfeiçoamento.
+
+                </p>
+
+
+                <p>
+
+                    Atualmente, cursa Biomedicina no UniSalesiano,
+                    onde está no segundo ano, e recentemente realizou
+                    uma formação profissional em Limpeza de Pele,
+                    dando seus primeiros passos na área de estética.
+
+                </p>
+
+
+                <p>
+
+                    Seu interesse pela estética sempre esteve presente.
+                    Agora, no início de sua carreira, Isabella transforma
+                    essa paixão em uma experiência de atendimento baseada
+                    em três pilares: resultado, bem-estar e confiança.
+
+                </p>
+
+
+                <p>
+
+                    Para ela, cada atendimento deve ser mais do que
+                    um procedimento. É um momento para cuidar da pele,
+                    desacelerar e fazer com que cada cliente se sinta
+                    acolhido, confortável e seguro durante toda
+                    a experiência.
+
+                </p>
+
+
+                <div class="quote">
+
+                    “Um novo começo,
+                    feito com propósito.”
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LOCALIZAÇÃO
+===================================================== -->
+
+<section class="location" id="localizacao">
+
+    <div class="container">
+
+        <div class="location-grid">
+
+
+            <div class="reveal">
+
+                <div class="section-kicker">
+                    Onde estamos
+                </div>
+
+                <h2 class="section-title">
+                    Um espaço para<br>
+                    cuidar de você.
+                </h2>
+
+                <p class="location-text">
+
+                    Atendimento em Araçatuba, na região
+                    do Alto da Saudade.
+
+                </p>
+
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=R.+Sen.+Assis+Chateaubriand,+672,+Alto+da+Saudade,+Ara%C3%A7atuba,+SP"
+                    target="_blank"
+                    class="btn btn-gold"
+                >
+                    Ver localização
+                </a>
+
+            </div>
+
+
+            <div class="location-card reveal">
+
+                <h3>
+                    Alto da Saudade
+                </h3>
+
+                <p>
+                    Araçatuba · São Paulo
+                </p>
+
+
+                <div class="hours">
+
+                    <div class="hour">
+                        <span>Segunda</span>
+                        <span>08:00 — 12:00</span>
+                    </div>
+
+                    <div class="hour">
+                        <span>Terça</span>
+                        <span>08:00 — 12:00</span>
+                    </div>
+
+                    <div class="hour">
+                        <span>Quarta</span>
+                        <span>08:00 — 12:00</span>
+                    </div>
+
+                    <div class="hour">
+                        <span>Quinta</span>
+                        <span>08:00 — 12:00</span>
+                    </div>
+
+                    <div class="hour">
+                        <span>Sexta</span>
+                        <span>08:00 — 12:00<br>17:30 — 21:00</span>
+                    </div>
+
+                    <div class="hour">
+                        <span>Sábado</span>
+                        <span>08:00 — 12:00<br>17:30 — 21:00</span>
+                    </div>
+
+                    <div class="hour">
+                        <span>Domingo</span>
+                        <span>Fechado</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTATO
+===================================================== -->
+
+<section class="contact" id="contato">
+
+    <div class="container reveal">
+
+        <div class="section-kicker">
+            Vamos conversar?
+        </div>
+
+
+        <h2 class="contact-title">
+            Sua pele merece<br>
+            esse momento.
+        </h2>
+
+
+        <p>
+
+            Entre em contato para tirar dúvidas,
+            conhecer o atendimento ou agendar
+            sua limpeza de pele.
+
+        </p>
+
+
+        <a
+            href="https://wa.me/5518991730294?text=Olá%20Isabella!%20Gostaria%20de%20saber%20mais%20sobre%20a%20limpeza%20de%20pele."
+            target="_blank"
+            class="btn btn-gold"
+        >
+            Falar pelo WhatsApp
+        </a>
+
+
+        <div class="socials">
+
+            <a
+                href="https://www.instagram.com/rpradoisa/"
+                target="_blank"
+                class="social"
+            >
+                Instagram · @rpradoisa
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <div class="footer-logo">
+                Isabella Prado
+            </div>
+
+            <p>
+                Estética Facial · Araçatuba/SP
+            </p>
+
+            <p>
+                © 2026 Isabella Prado
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+    href="https://wa.me/5518991730294?text=Olá%20Isabella!%20Gostaria%20de%20agendar%20um%20atendimento."
+    target="_blank"
+    class="whatsapp"
+    aria-label="WhatsApp"
+>
+
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+
+        <path d="M20 11.5a8.2 8.2 0 0 1-12.4 7.1L4 20l1.5-3.5A8.2 8.2 0 1 1 20 11.5Z"/>
+
+        <path d="M8.5 8.5c.3-.5.6-.5.9-.1l.8 1c.2.3.2.5 0 .8l-.4.5c.7 1.2 1.5 2 2.7 2.7l.5-.4c.3-.2.5-.2.8 0l1 .8c.4.3.4.6-.1.9-.6.4-1.3.5-2 .2-2.5-.9-4.4-2.8-5.3-5.3-.3-.7-.2-1.4.1-2Z"/>
+
+    </svg>
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+    /* MENU MOBILE */
+
+    function toggleMenu() {
+
+        const menu = document.querySelector(".nav-links");
+
+        menu.classList.toggle("open");
+
+    }
+
+
+    /* FECHAR MENU AO CLICAR */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document
+                .querySelector(".nav-links")
+                .classList.remove("open");
+
+        });
+
+    });
+
+
+    /* ANIMAÇÕES */
+
+    const observer = new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+    document
+        .querySelectorAll(".reveal")
+        .forEach(element => observer.observe(element));
+
+</script>
+
+
+</body>
+</html>
